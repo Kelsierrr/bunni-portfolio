@@ -1,0 +1,29 @@
+:root {
+    /* Colors */
+    --color-primary: #0A6CF1;       /* sea blue */
+    --color-secondary: #0B3B5E;     /* ocean blue */
+    --color-bg: #F7FAFC;            /* very soft white */
+    --color-text: #0F172A;          /* soft black */
+    --color-muted: #E5E7EB;         /* borders/muted */
+  
+    /* Radii */
+    --radius-1: 0.8rem;
+    --radius-2: 1.2rem;
+  
+    /* Shadows */
+    --shadow-card: 0 0.6rem 2rem rgba(0,0,0,.08);
+    --shadow-hover: 0 1rem 2.4rem rgba(0,0,0,.12);
+  
+    /* Layout */
+    --container-max: 120rem;
+    --container-pad: clamp(1.6rem, 1.2rem + 1vw, 3.2rem);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #0B1220;
+      --color-text: #E6EAF2;
+      --color-muted: #1F2937;
+    }
+  }
+  
