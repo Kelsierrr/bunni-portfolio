@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import FloatingWhatsApp from "../components/FloatingWhatsApp/FloatingWhatsApp";
+import FloatingWhatsApp from "../components/FloatingWhatsapp/FloatingWhatsapp";
 
 export default function RootLayout({ children }) {
   return (
