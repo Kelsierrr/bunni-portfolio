@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./FloatingWhatsApp.module.css";
+import styles from "./FloatingWhatsapp.module.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingWhatsApp() {
