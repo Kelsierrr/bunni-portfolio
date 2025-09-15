@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  gap: clamp(1rem, 1vw, 1rem);
+  gap: clamp(5rem, 2vw, 4rem);
   grid-template-columns: 1fr;          /* 1 column on mobile */
   align-items: center;
 }
@@ -27,12 +27,10 @@
 .content {
   display: grid;
   gap: 1.8rem;
- 
-
 }
 
 .text {
-  font-size: 1.7rem;
+  font-size: 2.7rem;
   line-height: 1.65;
   color: color-mix(in srgb, var(--color-text) 85%, transparent);
   margin: 0;

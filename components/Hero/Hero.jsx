@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -23,6 +23,18 @@ export default function Hero() {
               Contact Me
             </a>
           </div>
+        </div>
+
+        <div className={styles.imageWrap}>
+          <Image
+            src="/images/api.png"          // put your file in public/images/
+            alt="image of api"
+            width={900}
+            height={570}
+            priority={false}
+            className={styles.image}
+            sizes="(max-width: 768px) 0px, (max-width: 1200px) 45vw, 560px"
+          />
         </div>
       </div>
     </section>

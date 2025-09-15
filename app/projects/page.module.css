@@ -1,0 +1,31 @@
+.wrap {
+  padding-block: clamp(4rem, 3rem + 3vw, 8rem);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 2vw, 3.2rem);
+}
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2.6rem, 2rem + 1vw, 3.4rem);
+  font-weight: 800;
+}
+.lead {
+  margin: 0 auto;
+  max-width: 70ch;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  font-size: 1.6rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}

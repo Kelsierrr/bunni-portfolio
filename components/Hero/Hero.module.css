@@ -1,6 +1,6 @@
 .hero {
     /* full viewport height minus header offset */
-    min-height: calc(100dvh - var(--header-offset));
+    min-height: calc(85dvh - var(--header-offset));
     display: flex;
     align-items: center;
     padding-block: clamp(--radius-2, 16vw, 8rem);
@@ -16,7 +16,7 @@
   
   @media (min-width: 768px) {
     .inner {
-      grid-template-columns: 1fr 1fr; /* two-column layout */
+      grid-template-columns: 1fr 1.2fr; /* two-column layout */
     }
   }
   
@@ -81,16 +81,24 @@
   .btnSecondary:hover {
     background: color-mix(in srgb, var(--color-primary) 10%, transparent);
   }
-  
+  .imageWrap{
+    display: none;
+  }
   /* Right column: image */
-  .imageWrap {
+  @media (min-width: 768px){
+    .imageWrap {
     display: flex;
     justify-content: center;
   }
+  }
+  
   .image {
-    max-width: 24rem;
     width: 100%;
-    border-radius: 50%;
-    box-shadow: var(--shadow-card);
+  max-width: 64rem;                    /* ~560px cap */
+  height: auto;
+  border-radius: 1.2rem;               /* subtle rounding (not a circle) */
+  box-shadow: var(--shadow-card);
+  object-fit: cover;
+  margin-top: 4rem;
   }
   

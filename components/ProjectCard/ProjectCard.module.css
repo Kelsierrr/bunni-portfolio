@@ -1,0 +1,81 @@
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: var(--radius-2);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover { transform: translateY(-.2rem); box-shadow: var(--shadow-hover); }
+
+.featured { outline: 2px solid color-mix(in srgb, var(--color-primary) 25%, transparent); }
+
+.thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--color-muted);
+}
+.img {
+  object-fit: cover;
+}
+
+.body {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.8rem;
+}
+.title {
+  margin: 0;
+  font-size: clamp(1.8rem, 1.6rem + .4vw, 2.2rem);
+  font-weight: 700;
+}
+.summary {
+  margin: 0;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  font-size: 1.5rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  padding: 0;
+  margin: .4rem 0 0;
+  list-style: none;
+}
+.tech {
+  font-size: 1.2rem;
+  padding: .5rem .8rem;
+  border-radius: var(--radius-1);
+  background: color-mix(in srgb, var(--color-primary) 10%, white);
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: .8rem;
+}
+.btn, .btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 1.2rem;
+  border-radius: var(--radius-1);
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn:hover { transform: translateY(-.1rem); box-shadow: var(--shadow-hover); }
+.btnSecondary {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.btnSecondary:hover {
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}

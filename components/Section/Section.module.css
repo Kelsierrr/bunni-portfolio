@@ -4,7 +4,7 @@
 
   .tight {
     /* tighter section spacing (use this for About if you want less gap) */
-    padding-block: clamp(1rem, 1rem + 1vw, 3rem);
+    padding-block: clamp(3.2rem, 2rem + 2vw, 6rem);
   }
   
   
