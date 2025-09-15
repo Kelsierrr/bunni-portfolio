@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -20,31 +20,21 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
       <div className="container">
         <nav className={styles.nav} aria-label="Primary">
-          <Link href="/" className={styles.brand}>Bunni Ojanuyovwi</Link>
-
-          <div className={styles.links}>
+          {/* Centered links */}
+          <div className={styles.linksCenter}>
             <Link href="/" className={styles.link}>Home</Link>
             <Link href="/projects" className={styles.link}>Projects</Link>
             <Link href="/contact" className={styles.link}>Contact</Link>
-            <a
-              href="https://github.com/Kelsierrr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styles.btnPrimary} ${styles.cta}`}
-              aria-label="GitHub Profile"
-            >
-              <FaGithub aria-hidden="true" />
-              GitHub
-            </a>
           </div>
 
+          {/* Mobile toggle on the right */}
           <button
             className={styles.mobileBtn}
             aria-label="Toggle menu"
             aria-expanded={open ? "true" : "false"}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <FaTimes /> : <FaBars />}
+            {open ? <FaTimes size={26} /> : <FaBars size={26} />}
           </button>
         </nav>
 
@@ -53,15 +43,6 @@ export default function Header() {
             <Link href="/" className={styles.mobileLink} onClick={() => setOpen(false)}>Home</Link>
             <Link href="/projects" className={styles.mobileLink} onClick={() => setOpen(false)}>Projects</Link>
             <Link href="/contact" className={styles.mobileLink} onClick={() => setOpen(false)}>Contact</Link>
-            <a
-              href="https://github.com/Kelsierrr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mobileLink}
-              onClick={() => setOpen(false)}
-            >
-              GitHub
-            </a>
           </div>
         )}
       </div>

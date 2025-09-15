@@ -1,0 +1,96 @@
+.hero {
+    /* full viewport height minus header offset */
+    min-height: calc(100dvh - var(--header-offset));
+    display: flex;
+    align-items: center;
+    padding-block: clamp(--radius-2, 16vw, 8rem);
+    background: var(--color-bg);
+  }
+  
+  .inner {
+    display: grid;
+    align-items: center;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 768px) {
+    .inner {
+      grid-template-columns: 1fr 1fr; /* two-column layout */
+    }
+  }
+  
+  /* Text content */
+  .content {
+    display: grid;
+    gap: 2.4rem;
+  }
+  
+  .title {
+    font-size: clamp(2.8rem, 2rem + 2vw, 4.8rem);
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  
+  .name {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    max-width: 52ch;
+    color: color-mix(in srgb, var(--color-text) 80%, transparent);
+  }
+  
+  /* Call-to-action buttons */
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+  
+  .btnPrimary,
+  .btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    border-radius: var(--radius-2);
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  /* Primary = filled button */
+  .btnPrimary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .btnPrimary:hover {
+    transform: translateY(-.1rem);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Secondary = outlined button */
+  .btnSecondary {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+  .btnSecondary:hover {
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+  
+  /* Right column: image */
+  .imageWrap {
+    display: flex;
+    justify-content: center;
+  }
+  .image {
+    max-width: 24rem;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: var(--shadow-card);
+  }
+  

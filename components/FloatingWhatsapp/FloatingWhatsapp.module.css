@@ -1,0 +1,38 @@
+.fab {
+    position: fixed;
+    right: clamp(1.2rem, 2vw, 2rem);
+    bottom: calc(clamp(1.2rem, 2vw, 2rem) + env(safe-area-inset-bottom));
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: #25D366;            /* WhatsApp green */
+    color: #fff;
+    box-shadow: var(--shadow-hover);
+  
+    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+    z-index: 60;
+  }
+  
+  .fab:hover {
+    transform: translateY(-.12rem);
+  }
+  
+  .fab:focus-visible {
+    outline: 0.3rem solid color-mix(in srgb, #25D366 40%, white);
+    outline-offset: 0.2rem;
+  }
+  
+  .icon {
+    font-size: 2rem;               /* icon size */
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .fab { transition: none; }
+    .fab:hover { transform: none; }
+  }
+  

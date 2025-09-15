@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  gap: clamp(1rem, 1vw, 1rem);
+  grid-template-columns: 1fr;          /* 1 column on mobile */
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 2fr;  /* photo | text on desktop */
+  }
+}
+
+.photoWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  width: 100%;
+  max-width: 42rem;                    /* ~420px */
+  height: auto;
+  border-radius: 6%;                  /* circle portrait */
+  box-shadow: var(--shadow-card);
+}
+
+.content {
+  display: grid;
+  gap: 1.8rem;
+ 
+
+}
+
+.text {
+  font-size: 1.7rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--color-text) 85%, transparent);
+  margin: 0;
+}

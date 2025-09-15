@@ -1,91 +1,71 @@
 .header {
-    position: fixed;
-    inset: 0 0 auto 0; /* top:0, left/right:0 */
-    z-index: 50;
-    transition: background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
-    background-color: transparent;
-  }
-  .headerScrolled {
-    background-color: color-mix(in srgb, var(--color-bg) 95%, transparent);
-    backdrop-filter: saturate(1.2) blur(8px);
-    box-shadow: var(--shadow-card);
-    border-bottom: 1px solid var(--color-muted);
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: clamp(1.2rem, 0.8rem + 1vw, 2rem);
-  }
-  
-  .brand {
-    font-weight: 800;
-    letter-spacing: 0.2px;
-    font-size: clamp(1.8rem, 1.6rem + 0.6vw, 2.4rem);
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .links {
-    display: none;
-    gap: 2.4rem;
-  }
-  @media (min-width: 768px) {
-    .links { display: flex; }
-  }
-  
-  .link {
-    font-weight: 600;
-    color: color-mix(in srgb, var(--color-text) 70%, transparent);
-    transition: color .2s ease;
-  }
-  .link:hover { color: var(--color-primary); }
-  
-  .cta {
-    display: none;
-  }
-  @media (min-width: 768px) {
-    .cta { display: inline-flex; }
-  }
-  
-  .btnPrimary {
-    display: inline-flex;
-    align-items: center;
-    gap: .8rem;
-    padding: .9rem 1.6rem;
-    border-radius: var(--radius-2);
-    background: var(--color-primary);
-    color: white;
-    font-weight: 700;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .btnPrimary:hover { transform: translateY(-.1rem); box-shadow: var(--shadow-hover); }
-  
-  .mobileBtn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: var(--radius-1);
-  }
-  @media (min-width: 768px) {
-    .mobileBtn { display: none; }
-  }
-  
-  .mobilePanel {
-    display: grid;
-    gap: 1.2rem;
-    padding: 1.6rem var(--container-pad) 2rem;
-    border-top: 1px solid var(--color-muted);
-    background: color-mix(in srgb, var(--color-bg) 95%, transparent);
-    backdrop-filter: blur(8px);
-  }
-  .mobileLink {
-    font-weight: 600;
-    color: color-mix(in srgb, var(--color-text) 80%, transparent);
-  }
-  .mobileLink:hover { color: var(--color-primary); }
-  
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  transition: background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+  background-color: transparent;
+}
+.headerScrolled {
+  background-color: color-mix(in srgb, var(--color-bg) 95%, transparent);
+  backdrop-filter: saturate(1.2) blur(8px);
+  box-shadow: var(--shadow-card);
+  border-bottom: 1px solid var(--color-muted);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 2fr auto ; /* left spacer | center links | right toggle */
+  align-items: center;
+  padding-block: clamp(1.2rem, 0.8rem + 1vw, 2rem);
+}
+
+/* Centered links */
+.linksCenter {
+  display: flex;
+  gap: 2.4rem;
+  justify-self: center; /* center in the grid */
+  align-items: center;
+}
+
+.link {
+  font-weight: 600;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+  transition: color .2s ease;
+}
+.link:hover { color: var(--color-primary); }
+
+/* Remove brand + CTA styles entirely (no longer used) */
+
+/* Mobile toggle — no border, transparent bg to blend with header */
+.mobileBtn {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: none;                 /* remove border */
+  background: transparent;      /* blend into header */
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+  border-radius: var(--radius-1);
+}
+@media (max-width: 767px) {
+  .linksCenter { display: none; } /* hide center links on mobile */
+}
+@media (min-width: 768px) {
+  .mobileBtn { display: none; }
+}
+
+/* Mobile panel */
+.mobilePanel {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.6rem var(--container-pad) 2rem;
+  border-top: 1px solid var(--color-muted);
+  background: color-mix(in srgb, var(--color-bg) 95%, transparent);
+  backdrop-filter: blur(8px);
+}
+.mobileLink {
+  font-weight: 600;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+.mobileLink:hover { color: var(--color-primary); }

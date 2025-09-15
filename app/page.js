@@ -1,17 +1,13 @@
-import Header from "../components/Header/Header";
-import styles from "./page.module.css";
+import Hero from "../components/Hero/Hero";
+import About from "../components/About/About";
+
 
 export default function HomePage() {
   return (
     <>
-      <Header />
-      <main>
-        <section className={`${styles.hero}`}>
-          <div className="container">
-            <h1 className={styles.h1}>Clean, fast, user-focused web apps.</h1>
-          </div>
-        </section>
-      </main>
+      {/* Hero at top */}
+      <Hero />
+      <About />
     </>
   );
 }
