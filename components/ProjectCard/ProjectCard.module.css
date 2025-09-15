@@ -17,20 +17,20 @@
   aspect-ratio: 16/9;
   background: var(--color-muted);
 }
-.img {
-  object-fit: cover;
-}
+.img { object-fit: cover; }
 
 .body {
   display: grid;
-  gap: 1.2rem;
-  padding: 1.8rem;
+  gap: 1.6rem;            /* ⬅️ was 1.2rem */
+  padding: 2.2rem;        /* ⬅️ was 1.8rem */
 }
+
 .title {
   margin: 0;
   font-size: clamp(1.8rem, 1.6rem + .4vw, 2.2rem);
   font-weight: 700;
 }
+
 .summary {
   margin: 0;
   color: color-mix(in srgb, var(--color-text) 75%, transparent);
@@ -53,28 +53,47 @@
   color: color-mix(in srgb, var(--color-text) 80%, transparent);
 }
 
+/* Actions row: consistent size buttons, allow wrap on small widths */
 .actions {
   display: flex;
-  gap: 1rem;
-  margin-top: .8rem;
+  flex-wrap: wrap;                 /*  allow wrap on narrow cards */
+  gap: 1.2rem;                     /*  slightly larger gap */
+  margin-top: .4rem;
 }
+
+/* Shared button base */
 .btn, .btnSecondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .6rem;
-  padding: .9rem 1.2rem;
+
+  /* Consistent sizing */
+  min-height: 3.8rem;              /* fixed button height */
+  padding: 1rem 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1;                  /* prevents text affecting height */
   border-radius: var(--radius-1);
   font-weight: 600;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
 }
+
+/* Primary filled */
 .btn {
   background: var(--color-primary);
   color: #fff;
 }
-.btn:hover { transform: translateY(-.1rem); box-shadow: var(--shadow-hover); }
+.btn:hover {
+  transform: translateY(-.1rem);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Secondary outlined */
 .btnSecondary {
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
+  background: transparent;
 }
 .btnSecondary:hover {
   background: color-mix(in srgb, var(--color-primary) 10%, transparent);

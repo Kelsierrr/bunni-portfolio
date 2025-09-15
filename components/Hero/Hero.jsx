@@ -27,7 +27,7 @@ export default function Hero() {
 
         <div className={styles.imageWrap}>
           <Image
-            src="/images/api.png"          // put your file in public/images/
+            src="/images/api.PNG"          // put your file in public/images/
             alt="image of api"
             width={900}
             height={570}

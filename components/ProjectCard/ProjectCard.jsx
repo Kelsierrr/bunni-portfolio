@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt} from "react-icons/fa";
 import styles from "./ProjectCard.module.css";
 
 /**
@@ -36,12 +36,7 @@ export default function ProjectCard({ project, hasDetails = false }) {
         <div className={styles.actions}>
           {liveUrl && (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer" className={styles.btn}>
-              <FaExternalLinkAlt aria-hidden="true" /> Live
-            </a>
-          )}
-          {repoUrl && (
-            <a href={repoUrl} target="_blank" rel="noopener noreferrer" className={styles.btn}>
-              <FaGithub aria-hidden="true" /> Code
+              <FaExternalLinkAlt aria-hidden="true" /> Project Link
             </a>
           )}
           {hasDetails && (

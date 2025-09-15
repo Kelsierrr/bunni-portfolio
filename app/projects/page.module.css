@@ -20,7 +20,7 @@
 
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: clamp(2.4rem, 1.2rem + 1.2vw, 3.2rem); 
   grid-template-columns: 1fr;
 }
 @media (min-width: 640px) {
