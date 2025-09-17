@@ -4,8 +4,8 @@ import { caseStudies } from "../../../lib/caseStudies";
 import TechBadge from "../../../components/Badges/TechBadge";
 import ProjectGallery from "../../../components/ProjectGallery/ProjectGallery";
 
-export default function CaseStudyPage({ params }) {
-  const { slug } = params;
+export default async function CaseStudyPage({ params }) {
+  const { slug } = await params;
   const cs = caseStudies[slug];
 
   if (!cs) return notFound();
