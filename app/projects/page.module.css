@@ -1,5 +1,5 @@
 .wrap {
-  padding-block: clamp(4rem, 3rem + 3vw, 8rem);
+  padding-block: clamp(5rem, 3rem + 3vw, 9rem);
 }
 
 .header {
@@ -20,7 +20,7 @@
 
 .grid {
   display: grid;
-  gap: clamp(2.4rem, 1.2rem + 1.2vw, 3.2rem); 
+  gap: clamp(3.2rem, 1.2rem + 1.2vw, 3.8rem); 
   grid-template-columns: 1fr;
 }
 @media (min-width: 640px) {

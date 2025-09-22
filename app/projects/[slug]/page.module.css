@@ -1,5 +1,5 @@
 .wrap {
-  padding-block: clamp(4rem, 3rem + 3vw, 8rem);
+  padding-block: clamp(5rem, 3rem + 3vw, 9rem);
 }
 
 .hero {

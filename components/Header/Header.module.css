@@ -17,6 +17,7 @@
   grid-template-columns: 2fr auto ; /* left spacer | center links | right toggle */
   align-items: center;
   padding-block: clamp(1.2rem, 0.8rem + 1vw, 2rem);
+  margin: 0;
 }
 
 /* Centered links */
@@ -47,9 +48,12 @@
   background: transparent;      /* blend into header */
   color: color-mix(in srgb, var(--color-text) 80%, transparent);
   border-radius: var(--radius-1);
+  margin-right: 0.8rem;
 }
 @media (max-width: 767px) {
   .linksCenter { display: none; } /* hide center links on mobile */
+
+ 
 }
 @media (min-width: 768px) {
   .mobileBtn { display: none; }

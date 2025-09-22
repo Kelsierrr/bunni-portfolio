@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}>
-      <div className="container">
+      <div className="headerContainer">
         <nav className={styles.nav} aria-label="Primary">
           {/* Centered links */}
           <div className={styles.linksCenter}>
