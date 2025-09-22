@@ -1,0 +1,14 @@
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(2rem + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    padding: 1.2rem 1.8rem;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-hover);
+    font-weight: 600;
+    z-index: 70;
+  }
+  .success { background: #e8f5e9; color: #1b5e20; }
+  .error { background: #ffebee; color: #b71c1c; }
+  
