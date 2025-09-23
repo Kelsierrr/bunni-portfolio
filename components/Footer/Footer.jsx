@@ -16,7 +16,7 @@ export default function Footer() {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/placeholder"
+            href="https://www.linkedin.com/in/bunni-ojanuyovwi-ba0592386"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}

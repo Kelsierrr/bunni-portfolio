@@ -13,7 +13,6 @@
   /* Slightly larger gutters on small screens */
 @media (max-width: 767px) {
   .container {
-    /* previously clamp(1.6rem, 1.2rem + 1vw, 3.2rem) via var; add a bit more */
     padding-inline: clamp(2rem, 5vw, 3rem);
   }
 }
